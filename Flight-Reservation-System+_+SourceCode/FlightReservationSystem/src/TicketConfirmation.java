@@ -43,14 +43,14 @@ public class TicketConfirmation {
             super(Bc);
         }
 
-        static String seatAllocation(int s){
-             s = s/2;
+        static String seatAllocation(int lenSeat){
+            lenSeat = lenSeat/2;
             Random r = new Random();
             String[] AlphaString = {"A", "B", "C", "D", "E", "F"};
             String[] NumString={"1", "2", "3", "4", "5", "6"};
-            StringBuilder sb = new StringBuilder(s);
+            StringBuilder sb = new StringBuilder(lenSeat);
 
-            for (int i = 0; i < s; i++) {
+            for (int i = 0; i < lenSeat; i++) {
                 int letter = r.nextInt(AlphaString.length);
                 int randomNumber=r.nextInt(NumString.length);
                 sb.append(NumString[randomNumber]).append(AlphaString[letter]);
