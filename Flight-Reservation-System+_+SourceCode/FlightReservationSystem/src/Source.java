@@ -106,7 +106,7 @@ public class Source {
         System.out.print("Confirm to Book [Y/N]: ");
         String BookingConfirmation = getInput.next().toUpperCase();
         TicketConfirmation Obj4 = new TicketConfirmation(BookingConfirmation);
-        int lenPnrNumber = 8, s = 2, lenFlightNumber = 6;
+        int lenPnrNumber = 8, lenSeat = 2, lenFlightNumber = 6;
         if (Objects.equals(BookingConfirmation, "Y")) {
             assert Obj2 != null;
 
@@ -119,7 +119,7 @@ public class Source {
             System.out.printf("%10s %15s %15s %15s %10s %20s %15s %30s", "PNR", "FLIGHT", "ORIGIN", "DESTINATION", "SEAT", "SPECIAL SERVICE","STATUS", "DATETIME");
             System.out.println();
             System.out.println("------------------------------------------------------------------------------------------------------------------------------------------");
-            System.out.format("%10s %15s %15s %15s %10s %20s %15s %30s",TicketConfirmation.RandomString.PNR(lenPnrNumber),GenerateFlightNumber.FlightNumber(lenFlightNumber),Obj1.SourceAirport,Obj1.DestinationAirport,TicketConfirmation.RandomStringForSeat.seatAllocation(s),Obj3.choice,Obj4.BookingConfirmation,tomorrow);
+            System.out.format("%10s %15s %15s %15s %10s %20s %15s %30s",TicketConfirmation.RandomString.PNR(lenPnrNumber),GenerateFlightNumber.FlightNumber(lenFlightNumber),Obj1.SourceAirport,Obj1.DestinationAirport,TicketConfirmation.RandomStringForSeat.seatAllocation(lenSeat),Obj3.choice,Obj4.BookingConfirmation,tomorrow);
 
 
         }
