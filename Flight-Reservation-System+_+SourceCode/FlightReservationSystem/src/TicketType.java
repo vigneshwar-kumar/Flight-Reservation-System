@@ -20,11 +20,10 @@ public class TicketType {
         System.out.print("You Like to Add Special Service [Y/N] : ");
         choice = getInput.next().toUpperCase();
         if (Objects.equals(choice,"Y")){
-            choice = "YES";
+
         System.out.println("Please Choose Your Addon [Food / Water / Snacks] : ");
-        while(Objects.equals(choice,"YES"))
+        while(Objects.equals(choice,"Y"))
         {
-            choice = "Yes";
             System.out.print("Enter Your Choice : ");
             item = getInput.next();
             Addon.add(item);
@@ -41,6 +40,7 @@ public class TicketType {
                 System.out.println("Special Service Skipped..");
             }
             else {
+                choice = "YES";
                 System.out.print("Item Added in Service : ");
                 System.out.println(Addon);
             }
